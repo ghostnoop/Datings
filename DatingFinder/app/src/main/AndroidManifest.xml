@@ -15,7 +15,7 @@
             android:theme="@style/HiddenTitleTheme"
             android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".navigation.MainActivity"
+            android:name=".FinderActivity"
             android:theme="@style/HiddenTitleTheme" />
         <activity
             android:name=".ChatActivity"
@@ -36,7 +36,7 @@
             android:name=".navigation.SecondActivity"
             android:theme="@style/HiddenTitleTheme" />
         <activity
-            android:name=".FinderActivity"
+            android:name=".navigation.MainActivity"
             android:theme="@style/HiddenTitleTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
