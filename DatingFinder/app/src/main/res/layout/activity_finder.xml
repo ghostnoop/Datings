@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FinderActivity">
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/waiterRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/rocket_image"
+            android:layout_marginBottom="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/wait_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/wait_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_horizontal"
+            android:text="Пожалуйста\nждите"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/wait_title"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В данный момент мы подбираем\nвам идеальную пару" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/mainUI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:src="@drawable/ic_user"
+            android:id="@+id/profile_image"
+            android:layout_marginBottom="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/name_age_tv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/name_age_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_horizontal"
+            android:text="Ангелина, 19"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/name_age_tv"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Студентка, будущий фотограф" />
+
+
+        <RelativeLayout
+            android:id="@+id/buttonPanel"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:enabled="true"
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/mybutton"
+                android:text="Перейти в чат"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/next_image"
+                android:background="@android:color/transparent"
+                android:elevation="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_next"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                app:tint="@color/colorWhite" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

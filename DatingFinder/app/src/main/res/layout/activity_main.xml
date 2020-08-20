@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".navigation.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pg_bar"
+        style="@style/pg_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/native_lw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="@color/colorAccent"
+            android:ems="10"
+            android:hint="Введите ваше имя"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttonPanel"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/check_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/privacy_selector"
+                android:text="   I accept the terms of the"
+                android:textColor="#545454"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/privacy_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/check_policy"
+                android:layout_alignBottom="@id/check_policy"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/check_policy"
+                android:autoLink="web"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/link"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/mybutton"
+                android:enabled="false"
+                android:text="Дальше"
+                android:textAllCaps="false"
+                android:textColor="@color/colorGrayDark" />
+
+            <ImageView
+                android:id="@+id/next_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_next"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                app:tint="@color/colorGrayDark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_horizontal"
+            android:text="Как тебя зовут?"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Вопрос 1 из 6"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</FrameLayout>
