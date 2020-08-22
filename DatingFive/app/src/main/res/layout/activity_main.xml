@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/secular"
+        android:gravity="center"
+        android:text="Cards"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/locationViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/title_tv"
+        android:layout_marginTop="30dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_chats"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_btn"
+        android:text="Chats"
+        android:elevation="6dp"
+        android:padding="6dp"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/secular"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

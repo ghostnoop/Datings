@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:elevation="6dp"
+    app:cardCornerRadius="20dp"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:id="@+id/image_container"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample"
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/image_gradient_bottom"
+                android:id="@+id/image_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <ImageButton
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/image"
+                android:layout_alignBottom="@id/image"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_cancel" />
+
+            <ImageButton
+                android:id="@+id/accept_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/image"
+                android:layout_alignBottom="@id/image"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_accept" />
+
+            <TextView
+                android:id="@+id/name_age_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/distance_tv"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom|center"
+                android:text="Angelina, 22"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/distance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignBottom="@id/image"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="20dp"
+                android:text="2 km"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:layout_below="@+id/image_container"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:id="@+id/desc_tv"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="I love anime and Japanese culture, my dream is to visit Japan and touch pandas. Email me if you're funny :)"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

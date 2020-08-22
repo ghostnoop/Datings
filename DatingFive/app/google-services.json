@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "720366540316",
+    "firebase_url": "https://datingapp-3eeae.firebaseio.com",
+    "project_id": "datingapp-3eeae",
+    "storage_bucket": "datingapp-3eeae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720366540316:android:e352abd55420df044cf1d9",
+        "android_client_info": {
+          "package_name": "org.rec.datingfive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720366540316-4ahaipd0e0qe9v2lnkdn9muhl6c1ehrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTJhbni3zIe-vli7IOYMoSfu6JWgegW3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720366540316-4ahaipd0e0qe9v2lnkdn9muhl6c1ehrj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
