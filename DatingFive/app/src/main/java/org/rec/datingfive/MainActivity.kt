@@ -2,8 +2,11 @@ package org.rec.datingfive
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.telephony.TelephonyManager
+import android.view.Gravity
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -11,10 +14,13 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
+import com.skydoves.androidbottombar.BottomMenuItem
+import com.skydoves.androidbottombar.OnMenuItemSelectedListener
+import com.skydoves.androidbottombar.forms.titleForm
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.Serializable
-import kotlin.math.abs
+import java.lang.Math.abs
 import kotlinx.android.synthetic.main.activity_main.locationViewPager as locationViewPager1
+
 
 class MainActivity : AppCompatActivity() {
     private val US_IN = listOf("us", "in")
@@ -32,13 +38,48 @@ class MainActivity : AppCompatActivity() {
             setUi()
         } else
             getURL()
-//        setUi()
 
 
     }
 
     private fun setUi(){
         setDataToAdapter(getHUMANS())
+//        val type = Typeface.createFromAsset(assets, "secular_regular.ttf")
+//        bottomBar.addBottomMenuItems(mutableListOf(
+//            BottomMenuItem(this)
+//                .setTitle("Cards")
+//                .setTitleColor(Color.BLACK)
+//                .setTitleTypeface(type)
+//                .setTitleSize(26f)
+//                .setTitlePadding(6)
+//                .setTitleGravity(Gravity.CENTER)
+//                .build(),
+//            BottomMenuItem(this)
+//                .setTitleColor(Color.BLACK)
+//                .setTitleTypeface(type)
+//                .setTitleSize(26f)
+//                .setTitlePadding(6)
+//                .setTitleGravity(Gravity.CENTER)
+//                .setTitle("Chats")
+//                .build()
+//        ))
+//
+//        bottomBar.onMenuItemSelectedListener = object : OnMenuItemSelectedListener{
+//            override fun onMenuItemSelected(
+//                index: Int,
+//                bottomMenuItem: BottomMenuItem,
+//                fromUser: Boolean
+//            ) {
+//
+//                when {
+//                    index != 0 -> {
+//                        val intent = Intent(applicationContext, ChatActivity::class.java)
+//                        startActivity(intent)
+//                    }
+//                }
+//            }
+//
+//        }
         btn_chats.setOnClickListener{
             val intent = Intent(this, ChatActivity::class.java)
             startActivity(intent)
@@ -50,13 +91,20 @@ class MainActivity : AppCompatActivity() {
         val adapter =
             HumanModelAdapter(this, locationList) { adapterPosition ->
                 locationList.removeAt(adapterPosition)
+                if(locationList.size == 0){
+                    info_tv.visibility = View.VISIBLE
+                }
             }
+
 
 
         locationViewPager1.adapter = adapter
 
 
-        addCompositePageTransformer()
+        locationViewPager1.isUserInputEnabled = false;
+
+
+//        addCompositePageTransformer()
     }
 
     private fun addCompositePageTransformer() {

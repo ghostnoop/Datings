@@ -31,6 +31,8 @@ class HumanModelAdapter(private val context: Context, private val humans: List<H
         holder.itemView.desc_tv.text =     human.description
 
         holder.itemView.accept_btn.setOnClickListener {
+            listener(position)
+            notifyItemRemoved(position)
             val intent = Intent(context, PrivateChatActivity::class.java)
             intent.putExtra("human", human as Serializable)
             context.startActivity(intent)
