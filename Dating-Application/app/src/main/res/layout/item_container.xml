@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="240dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:elevation="6dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginBottom="10dp"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:id="@+id/image_container"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample"
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_gradient_bottom"
+                android:id="@+id/image_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:id="@+id/name_age_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/distance_tv"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom|center"
+                android:text="Angelina, 22"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/distance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignBottom="@id/image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:text="2 km"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/hear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="12dp"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_icn_heart_off" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

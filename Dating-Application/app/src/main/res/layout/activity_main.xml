@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/title_layout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/secular"
+            android:text="Discover"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="33sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_messages"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_btn_mesages"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/title_tv"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/discoverRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:overScrollMode="never"
+        android:paddingStart="15dp"
+        tools:listitem="@layout/item_container"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/info_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:text="Amount of discovery is over..\n Try again later"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/img_filter"
+        android:src="@drawable/image_gradient_bottom"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

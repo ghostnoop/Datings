@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "239089302609",
+    "firebase_url": "https://couplediscoverapp.firebaseio.com",
+    "project_id": "couplediscoverapp",
+    "storage_bucket": "couplediscoverapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239089302609:android:40e36268ff70ee02158c70",
+        "android_client_info": {
+          "package_name": "org.rec.datingapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239089302609-6dffkqcljtsf0ln6gc3fpf3qo1is8v32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyOaHxs5Cwg6q_CKMrDVV0q71QdzQT72I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239089302609-6dffkqcljtsf0ln6gc3fpf3qo1is8v32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
